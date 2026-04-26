@@ -2,12 +2,14 @@ const { OpenAI } = require("openai");
 
 module.exports = async function (context, req) {
   const pergunta = req.body?.pergunta || "Nenhuma pergunta recebida.";
+  context.log(`Pergunta recebida: ${pergunta}`);
 
   const client = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
   });
 
   try {
+    context.log("Fazendo chamada para a OpenAI...");
     const resposta = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
@@ -23,6 +25,7 @@ module.exports = async function (context, req) {
       }
     };
   } catch (erro) {
+    context.log('Erro ao chamar OpenAI:', erro.message);
     context.res = {
       status: 500,
       body: { erro: erro.message }
