@@ -143,3 +143,5 @@ Além de ser meu portfólio, este repositório também será usado como:
 ---
 
 > Este repositório é um projeto vivo: à medida que eu evoluir profissionalmente, o portfólio e a IA também vão evoluir.
+
+.
