@@ -1,0 +1,165 @@
+:root {
+  --cor-fundo-header: rgb(251, 251, 252);
+  --cor-fonte: white;
+  --cor-destaque: #4b3892;
+  --cor-link-bg: #5734b8;
+  --cor-fonte-secundaria: aliceblue;
+  --fonte-principal: 'Maven Pro', sans-serif;
+}
+
+* {
+  font-family: var(--fonte-principal);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url('./tempo/Astronauta.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--cor-fonte);
+  text-align: center;
+}
+
+header {
+  background: var(--cor-fundo-header);
+  width: 100%;
+  padding: 5px 10px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.logo-nav {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+  transition: transform 0.3s ease;
+}
+
+.logo-grupo {
+  margin: 20px 0;
+}
+.logo-nav:hover {
+  transform: scale(1.05);
+}
+
+.nossa-foto {
+  max-width: 150px;
+  width: 200px;
+  height: 150px;
+  border: 6px inset hsl(235, 86%, 65%);
+  border-radius: 15%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--cor-fonte);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffd700;
+}
+
+#fonte {
+  background-color: rgb(88, 158, 216);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  border-style: inset;
+}
+
+.fonte {
+  font-size: x-large;
+  margin: 5px;
+}
+
+h1 {
+  padding: 50px;
+}
+
+.apresentacao {
+  font-size: medium;
+  color: var(--cor-fonte-secundaria);
+  border: 6px solid var(--cor-destaque);
+  border-radius: 10px;
+  margin: 50px auto;
+  padding: 10px;
+  max-width: 760px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+#ladoalado {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+section {
+  background-color: var(--cor-link-bg);
+  border-radius: 10px;
+  max-width: 150px;
+  margin: 10px;
+  padding: 10px;
+  font-size: medium;
+}
+
+p {
+  font-size: 13px;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .apresentacao {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  h1 {
+    padding: 20px;
+  }
+
+  #fonte {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  .nossa-foto,
+  .logo-nav {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  #ladoalado {
+    flex-direction: column;
+    align-items: center;
+  }
+}
