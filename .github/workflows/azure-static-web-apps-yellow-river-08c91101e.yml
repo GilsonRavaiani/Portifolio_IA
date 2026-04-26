@@ -22,17 +22,17 @@ jobs:
 
       - name: Build And Deploy
         id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1.1.0
+        uses: Azure/static-web-apps-deploy@main
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_RIVER_08C91101E }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
 
           ###### CONFIGURAÇÕES DO PROJETO ######
-          app_location: "/"          # Onde está seu site (HTML/CSS/JS)
-          api_location: "api"        # Onde está sua API (PASTA /api)
-          output_location: "/"       # Conteúdo final do site
-          ###### FIM DAS CONFIGURAÇÕES ######
+          app_location: "/"     # Onde está seu site
+          api_location: "api"   # Onde está sua API
+          output_location: "/"  # Conteúdo final
+          ###### FIM ######
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -41,7 +41,7 @@ jobs:
     steps:
       - name: Close Pull Request
         id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1.1.0
+        uses: Azure/static-web-apps-deploy@main
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_RIVER_08C91101E }}
           action: "close"
