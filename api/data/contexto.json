@@ -1,0 +1,35 @@
+{
+  "resumo": "Profissional de tecnologia com experiência desde 2004 em telecomunicações e TI, com foco atual em cloud, Azure, AWS e integração com inteligência artificial.",
+  
+  "experiencia": [
+    "NTT Data – Service Field Support Technician Assistant",
+    "Hospital Therezinha de Jesus – Suporte ao usuário",
+    "DPU – Analista de infraestrutura",
+    "MRS Logística – Suporte técnico com Azure e Office 365",
+    "Banco do Brasil – suporte TI",
+    "Experiência com telecomunicações desde 2004"
+  ],
+
+  "certificacoes": [
+    "Azure Fundamentals (AZ-900)",
+    "AWS Cloud Practitioner",
+    "Microsoft Networking Fundamentals",
+    "HDI Desktop Support Technician"
+  ],
+
+  "skills": [
+    "Azure",
+    "AWS",
+    "Active Directory",
+    "Office 365",
+    "Redes",
+    "Telecomunicações",
+    "Infraestrutura",
+    "Hardware e Software"
+  ],
+
+  "formacao": [
+    "Pós-graduação em Infraestrutura para IA e Deep Learning",
+    "Graduação em Análise e Desenvolvimento de Sistemas"
+  ]
+}
