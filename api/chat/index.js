@@ -2,6 +2,110 @@ const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
 
+function carregarBaseDeConhecimento() {
+  const contextoPath = path.join(__dirname, "..", "data", "contexto.json");
+  const conteudo = fs.readFileSync(contextoPath, "utf8");
+  return JSON.parse(conteudo);
+}
+
+function selecionarContexto(base, pergunta) {
+  const p = pergunta.toLowerCase();
+
+  if (
+    p.includes("certificação") ||
+    p.includes("certificações") ||
+    p.includes("certificado") ||
+    p.includes("certificados")
+  ) {
+    return {
+      tipo: "certificacoes",
+      contexto: base.certificacoes.join("\n")
+    };
+  }
+
+  if (
+    p.includes("experiência") ||
+    p.includes("experiencias") ||
+    p.includes("empresa") ||
+    p.includes("empresas") ||
+    p.includes("trabalho") ||
+    p.includes("trabalhou") ||
+    p.includes("carreira")
+  ) {
+    return {
+      tipo: "experiencia",
+      contexto: base.experiencia.join("\n")
+    };
+  }
+
+  if (
+    p.includes("tecnologia") ||
+    p.includes("tecnologias") ||
+    p.includes("skill") ||
+    p.includes("skills") ||
+    p.includes("conhecimento") ||
+    p.includes("conhecimentos") ||
+    p.includes("ferramenta") ||
+    p.includes("ferramentas")
+  ) {
+    return {
+      tipo: "skills",
+      contexto: base.skills.join("\n")
+    };
+  }
+
+  if (
+    p.includes("formação") ||
+    p.includes("formacao") ||
+    p.includes("curso") ||
+    p.includes("cursos") ||
+    p.includes("graduação") ||
+    p.includes("graduacao") ||
+    p.includes("pós") ||
+    p.includes("pos")
+  ) {
+    return {
+      tipo: "formacao",
+      contexto: base.formacao.join("\n")
+    };
+  }
+
+  if (
+    p.includes("objetivo") ||
+    p.includes("meta") ||
+    p.includes("metas") ||
+    p.includes("futuro") ||
+    p.includes("pretende")
+  ) {
+    return {
+      tipo: "objetivo",
+      contexto: base.objetivo.join("\n")
+    };
+  }
+
+  return {
+    tipo: "resumo",
+    contexto: [
+      `Resumo: ${base.resumo}`,
+      "",
+      "Experiência:",
+      ...base.experiencia,
+      "",
+      "Certificações:",
+      ...base.certificacoes,
+      "",
+      "Skills:",
+      ...base.skills,
+      "",
+      "Formação:",
+      ...base.formacao,
+      "",
+      "Objetivos:",
+      ...base.objetivo
+    ].join("\n")
+  };
+}
+
 module.exports = async function (context, req) {
   try {
     const apiKey = process.env.OPENAI_API_KEY;
@@ -26,26 +130,26 @@ module.exports = async function (context, req) {
       return;
     }
 
-    const contextoPath = path.join(__dirname, "..", "data", "contexto.txt");
-    const contexto = fs.readFileSync(contextoPath, "utf8");
+    const base = carregarBaseDeConhecimento();
+    const resultadoContexto = selecionarContexto(base, message);
 
-const systemPrompt = `
+    const systemPrompt = `
 Você é um assistente especializado no portfólio de Gilson Ravaiani.
 
 REGRAS CRÍTICAS:
 - Responda SOMENTE com base nas informações do contexto abaixo.
-- NÃO invente certificações, experiências, empresas ou tecnologias.
+- NÃO invente certificações, experiências, empresas, tecnologias, cursos ou projetos.
 - NÃO use conhecimento externo.
 - Se a informação não estiver no contexto, responda exatamente:
   "Não encontrei essa informação no meu contexto atual."
-- Seja direto e objetivo.
+- Seja claro, profissional e objetivo.
+- Quando fizer sentido, organize a resposta em lista.
 
-FORMATO:
-- Respostas claras
-- Use listas quando fizer sentido
+TIPO DE CONTEXTO SELECIONADO:
+${resultadoContexto.tipo}
 
 CONTEXTO:
-${contexto}
+${resultadoContexto.contexto}
 `;
 
     const client = new OpenAI({ apiKey });
@@ -64,12 +168,16 @@ ${contexto}
       ]
     });
 
-    const reply = response.output_text || "Nao foi possivel gerar uma resposta no momento.";
+    const reply =
+      response.output_text || "Nao foi possivel gerar uma resposta no momento.";
 
     context.res = {
       status: 200,
       headers: { "Content-Type": "application/json" },
-      body: { reply }
+      body: {
+        reply,
+        contextoSelecionado: resultadoContexto.tipo
+      }
     };
   } catch (error) {
     context.log.error("Erro em /api/chat:", error);
