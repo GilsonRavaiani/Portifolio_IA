@@ -1,23 +1,86 @@
-//let elementH1 = document.querySelector("h1")
-
-//console.log(elementH1)
-
-//elementH1.innerText = `Gilson Ravaiani` 
+// =========================
+// SEU CÓDIGO ORIGINAL
+// =========================
 
 let botaoRetornar = document.getElementById("botao-retornar");
 
-botaoRetornar.addEventListener("click", function () {
+if (botaoRetornar) {
+    botaoRetornar.addEventListener("click", function () {
+        alert("Obrigado por me visitar, retornando a página principal");
+        window.location.href = "index.html";
+    });
 
+    botaoRetornar.addEventListener("mouseenter", () => {
+        botaoRetornar.style.cursor = "pointer";
+    });
+}
 
-    alert("Obrigado por me visitar, retornando a página principal")
+// =========================
+// CHATBOT
+// =========================
 
-    window.location.href = "index.html";
+document.addEventListener("DOMContentLoaded", () => {
+    const chatForm = document.getElementById("chat-form");
+    const chatInput = document.getElementById("chat-input");
+    const chatMessages = document.getElementById("chat-messages");
 
-});
+    // Evita erro em páginas que não têm chatbot
+    if (!chatForm || !chatInput || !chatMessages) {
+        return;
+    }
 
-let botao = document.getElementById("botao-retornar");
+    function addMessage(author, text, className = "") {
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("chat-message");
 
-botao.addEventListener("mouseenter", () => {
+        if (className) {
+            messageElement.classList.add(className);
+        }
 
-    botao.style.cursor = "pointer";
+        messageElement.innerHTML = `<strong>${author}:</strong> ${text}`;
+        chatMessages.appendChild(messageElement);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        return messageElement;
+    }
+
+    async function sendMessageToApi(message) {
+        const response = await fetch("/api/chat", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ message })
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+            throw new Error(data.error || "Erro ao consultar o assistente.");
+        }
+
+        return data.reply || "Nao foi possivel obter uma resposta no momento.";
+    }
+
+    chatForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const message = chatInput.value.trim();
+
+        if (!message) return;
+
+        addMessage("Você", message, "user-message");
+
+        chatInput.value = "";
+        chatInput.focus();
+
+        const loadingMessage = addMessage("IA", "Pensando...", "bot-message");
+
+        try {
+            const reply = await sendMessageToApi(message);
+            loadingMessage.innerHTML = `<strong>IA:</strong> ${reply}`;
+        } catch (error) {
+            loadingMessage.innerHTML = `<strong>Erro:</strong> ${error.message}`;
+        }
+    });
 });
