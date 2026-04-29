@@ -24,18 +24,43 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    chatToggle.addEventListener("click", () => {
-        chatContainer.classList.toggle("chat-hidden");
+    function abrirChat() {
+        chatContainer.classList.remove("chat-hidden");
+        chatContainer.setAttribute("aria-hidden", "false");
+        chatInput.focus();
+    }
 
-        if (!chatContainer.classList.contains("chat-hidden")) {
-            chatInput.focus();
+    function fecharChat() {
+        chatContainer.classList.add("chat-hidden");
+        chatContainer.setAttribute("aria-hidden", "true");
+    }
+
+    function alternarChat() {
+        const estaFechado = chatContainer.classList.contains("chat-hidden");
+
+        if (estaFechado) {
+            abrirChat();
+        } else {
+            fecharChat();
         }
+    }
+
+    chatToggle.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        alternarChat();
     });
 
     chatClose.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
-        chatContainer.classList.add("chat-hidden");
+        fecharChat();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !chatContainer.classList.contains("chat-hidden")) {
+            fecharChat();
+        }
     });
 
     function addMessage(author, text, className = "") {

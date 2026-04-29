@@ -186,9 +186,7 @@ p {
   font-size: 13px;
 }
 
-/* =========================
-   CHATBOT
-========================= */
+/* CHATBOT */
 
 #chat-toggle {
   position: fixed;
@@ -229,7 +227,7 @@ p {
 }
 
 .chat-hidden {
-  display: none;
+  display: none !important;
 }
 
 #chat-header {
@@ -346,14 +344,12 @@ p {
   border-radius: 24px;
   cursor: pointer;
   font-weight: 600;
-  flex-shrink: 0;
 }
 
 #chat-form button:hover {
   background: var(--cor-chat-primaria-escura);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .apresentacao {
     margin: 20px;
