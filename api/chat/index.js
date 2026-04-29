@@ -1,3 +1,4 @@
+const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
 
@@ -132,6 +133,19 @@ function selecionarContexto(base, pergunta) {
 
 module.exports = async function (context, req) {
   try {
+    const apiKey = process.env.OPENAI_API_KEY;
+
+    if (!apiKey) {
+      context.res = {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+        body: {
+          error: "OPENAI_API_KEY nao configurada."
+        }
+      };
+      return;
+    }
+
     const body = req && req.body ? req.body : {};
     const message = typeof body.message === "string" ? body.message.trim() : "";
 
@@ -150,14 +164,60 @@ module.exports = async function (context, req) {
     const base = lerJsonSeguro(contextoPath);
     const selecionado = selecionarContexto(base, message);
 
+    if (!selecionado.contexto || !selecionado.contexto.trim()) {
+      context.res = {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+        body: {
+          error: "Contexto selecionado vazio."
+        }
+      };
+      return;
+    }
+
+    const client = new OpenAI({ apiKey });
+
+    const systemPrompt = `
+Você é um assistente especializado no portfólio de Gilson Ravaiani.
+
+REGRAS:
+- Responda somente com base no contexto fornecido.
+- Nao invente informacoes.
+- Nao use conhecimento externo.
+- Se algo nao estiver no contexto, responda exatamente:
+  "Nao encontrei essa informacao no meu contexto atual."
+- Seja objetivo, claro e profissional.
+- Quando fizer sentido, use listas.
+
+TIPO DE CONTEXTO:
+${selecionado.tipo}
+
+CONTEXTO:
+${selecionado.contexto}
+`;
+
+    const response = await client.responses.create({
+      model: "gpt-4.1-mini",
+      input: [
+        {
+          role: "system",
+          content: systemPrompt
+        },
+        {
+          role: "user",
+          content: message
+        }
+      ]
+    });
+
+    const reply = response.output_text || "Nao foi possivel gerar resposta.";
+
     context.res = {
       status: 200,
       headers: { "Content-Type": "application/json" },
       body: {
-        ok: true,
-        pergunta: message,
-        contextoSelecionado: selecionado.tipo,
-        contexto: selecionado.contexto
+        reply,
+        contextoSelecionado: selecionado.tipo
       }
     };
   } catch (error) {
