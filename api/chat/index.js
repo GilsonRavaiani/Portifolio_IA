@@ -179,16 +179,15 @@ ${resultadoContexto.contexto}
         contextoSelecionado: resultadoContexto.tipo
       }
     };
-  } catch (error) {
-    context.log.error("Erro em /api/chat:", error);
+ } catch (error) {
+  context.log.error("ERRO COMPLETO:", error);
 
-    context.res = {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-      body: {
-        error: "Erro ao processar a requisicao.",
-        details: error.message
-      }
-    };
-  }
-};
+  context.res = {
+    status: 500,
+    headers: { "Content-Type": "application/json" },
+    body: {
+      error: "Erro ao processar a requisicao.",
+      detalhe: error.message
+    }
+  };
+}
