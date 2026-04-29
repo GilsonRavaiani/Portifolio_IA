@@ -177,26 +177,17 @@ h1 {
   background: #000;
 }
 
-section {
-  background-color: var(--cor-link-bg);
-  border-radius: 10px;
-  max-width: 150px;
-  margin: 10px;
-  padding: 10px;
-  font-size: medium;
+footer {
+  padding: 20px 10px 90px;
+  text-align: center;
 }
 
 p {
   font-size: 13px;
 }
 
-footer {
-  padding: 20px 10px 90px;
-  text-align: center;
-}
-
 /* =========================
-   CHATBOT COMPLETO
+   CHATBOT
 ========================= */
 
 #chat-toggle {
@@ -224,9 +215,9 @@ footer {
   right: 24px;
   bottom: 96px;
   width: 380px;
-  max-width: calc(100vw - 32px);
+  max-width: calc(100vw - 24px);
   height: 540px;
-  max-height: calc(100vh - 140px);
+  max-height: calc(100vh - 130px);
   background: #ffffff;
   border-radius: 16px;
   display: flex;
@@ -282,23 +273,24 @@ footer {
 
 #chat-messages {
   flex: 1;
-  padding: 12px;
+  padding: 16px;
   overflow-y: auto;
   background: var(--cor-chat-fundo);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .chat-message {
-  margin-bottom: 2px;
-  padding: 12px;
-  border-radius: 12px;
-  max-width: 82%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  max-width: 88%;
   text-align: left;
-  line-height: 1.45;
-  word-break: break-word;
-  white-space: pre-wrap;
+  line-height: 1.65;
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: 15px;
 }
 
 .bot-message {
@@ -324,19 +316,21 @@ footer {
 
 #chat-form {
   display: flex;
-  padding: 12px;
-  gap: 8px;
+  align-items: center;
+  padding: 14px;
+  gap: 10px;
   border-top: 1px solid #ddd;
   background: #ffffff;
 }
 
 #chat-input {
   flex: 1;
-  padding: 12px 14px;
-  border-radius: 22px;
+  min-width: 0;
+  padding: 13px 16px;
+  border-radius: 24px;
   border: 1px solid #ccc;
   outline: none;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #chat-input:focus {
@@ -348,10 +342,11 @@ footer {
   background: var(--cor-chat-primaria);
   color: #ffffff;
   border: none;
-  padding: 12px 18px;
-  border-radius: 22px;
+  padding: 13px 20px;
+  border-radius: 24px;
   cursor: pointer;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 #chat-form button:hover {
@@ -390,9 +385,27 @@ footer {
   }
 
   #chat-container {
-    width: 92%;
-    right: 4%;
-    bottom: 88px;
-    height: 70vh;
+    width: calc(100vw - 24px);
+    right: 12px;
+    bottom: 84px;
+    height: 72vh;
+  }
+
+  #chat-toggle {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  #chat-form {
+    padding: 12px;
+  }
+
+  #chat-input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  #chat-form button {
+    padding: 12px 16px;
   }
 }
