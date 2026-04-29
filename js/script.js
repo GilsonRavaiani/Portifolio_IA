@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function abrirChat() {
         chatContainer.classList.remove("chat-hidden");
         chatContainer.setAttribute("aria-hidden", "false");
-        chatInput.focus();
     }
 
     function fecharChat() {
@@ -36,9 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function alternarChat() {
-        const estaFechado = chatContainer.classList.contains("chat-hidden");
-
-        if (estaFechado) {
+        if (chatContainer.classList.contains("chat-hidden")) {
             abrirChat();
         } else {
             fecharChat();
@@ -104,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         addMessage("Você", text, "user-message");
         chatInput.value = "";
-        chatInput.focus();
 
         const loading = addMessage("IA", "Pensando...", "bot-message");
 
