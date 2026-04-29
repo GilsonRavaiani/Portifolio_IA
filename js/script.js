@@ -1,7 +1,3 @@
-// =========================
-// BOTAO RETORNAR
-// =========================
-
 let botaoRetornar = document.getElementById("botao-retornar");
 
 if (botaoRetornar) {
@@ -15,10 +11,6 @@ if (botaoRetornar) {
     });
 }
 
-// =========================
-// CHATBOT
-// =========================
-
 document.addEventListener("DOMContentLoaded", () => {
     const chatToggle = document.getElementById("chat-toggle");
     const chatContainer = document.getElementById("chat-container");
@@ -28,14 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatMessages = document.getElementById("chat-messages");
 
     if (!chatToggle || !chatContainer || !chatClose || !chatForm || !chatInput || !chatMessages) {
+        console.error("Elementos do chatbot não encontrados.");
         return;
     }
 
     chatToggle.addEventListener("click", () => {
-        chatContainer.classList.toggle("chat-hidden");
-
-        if (!chatContainer.classList.contains("chat-hidden")) {
+        if (chatContainer.classList.contains("chat-hidden")) {
+            chatContainer.classList.remove("chat-hidden");
             chatInput.focus();
+        } else {
+            chatContainer.classList.add("chat-hidden");
         }
     });
 
@@ -86,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         addMessage("Você", message, "user-message");
-
         chatInput.value = "";
         chatInput.focus();
 
@@ -99,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             loadingMessage.classList.remove("bot-message");
             loadingMessage.classList.add("error-message");
             loadingMessage.innerHTML = `<strong>Erro:</strong> ${error.message}`;
+            console.error("Erro no chatbot:", error);
         }
     });
 });
