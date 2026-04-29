@@ -186,12 +186,14 @@ p {
   font-size: 13px;
 }
 
-/* CHATBOT */
+/* =========================
+   CHATBOT
+========================= */
 
 #chat-toggle {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  right: 20px;
+  bottom: 20px;
   width: 60px;
   height: 60px;
   border: none;
@@ -210,12 +212,12 @@ p {
 
 #chat-container {
   position: fixed;
-  right: 24px;
-  bottom: 96px;
+  right: 20px;
+  bottom: 92px;
   width: 380px;
-  max-width: calc(100vw - 24px);
   height: 540px;
-  max-height: calc(100vh - 130px);
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 140px);
   background: #ffffff;
   border-radius: 16px;
   display: flex;
@@ -344,12 +346,14 @@ p {
   border-radius: 24px;
   cursor: pointer;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 #chat-form button:hover {
   background: var(--cor-chat-primaria-escura);
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .apresentacao {
     margin: 20px;
@@ -385,6 +389,7 @@ p {
     right: 12px;
     bottom: 84px;
     height: 72vh;
+    max-height: 72vh;
   }
 
   #chat-toggle {
