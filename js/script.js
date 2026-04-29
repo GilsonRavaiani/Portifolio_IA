@@ -1,17 +1,17 @@
-let botaoRetornar = document.getElementById("botao-retornar");
-
-if (botaoRetornar) {
-    botaoRetornar.addEventListener("click", function () {
-        alert("Obrigado por me visitar, retornando a página principal");
-        window.location.href = "index.html";
-    });
-
-    botaoRetornar.addEventListener("mouseenter", () => {
-        botaoRetornar.style.cursor = "pointer";
-    });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
+    const botaoRetornar = document.getElementById("botao-retornar");
+
+    if (botaoRetornar) {
+        botaoRetornar.addEventListener("click", function () {
+            alert("Obrigado por me visitar, retornando a página principal");
+            window.location.href = "index.html";
+        });
+
+        botaoRetornar.addEventListener("mouseenter", () => {
+            botaoRetornar.style.cursor = "pointer";
+        });
+    }
+
     const chatToggle = document.getElementById("chat-toggle");
     const chatContainer = document.getElementById("chat-container");
     const chatClose = document.getElementById("chat-close");
@@ -25,74 +25,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     chatToggle.addEventListener("click", () => {
-        if (chatContainer.classList.contains("chat-hidden")) {
-            chatContainer.classList.remove("chat-hidden");
+        chatContainer.classList.toggle("chat-hidden");
+
+        if (!chatContainer.classList.contains("chat-hidden")) {
             chatInput.focus();
-        } else {
-            chatContainer.classList.add("chat-hidden");
         }
     });
 
-    chatClose.addEventListener("click", () => {
+    chatClose.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
         chatContainer.classList.add("chat-hidden");
     });
 
     function addMessage(author, text, className = "") {
-        const messageElement = document.createElement("div");
-        messageElement.classList.add("chat-message");
+        const message = document.createElement("div");
+        message.classList.add("chat-message");
 
         if (className) {
-            messageElement.classList.add(className);
+            message.classList.add(className);
         }
 
-        messageElement.innerHTML = `<strong>${author}:</strong> ${text}`;
-        chatMessages.appendChild(messageElement);
+        message.innerHTML = `<strong>${author}:</strong> ${text}`;
+        chatMessages.appendChild(message);
         chatMessages.scrollTop = chatMessages.scrollHeight;
 
-        return messageElement;
+        return message;
     }
 
-    async function sendMessageToApi(message) {
+    async function sendMessageToApi(text) {
         const response = await fetch("/api/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ message })
+            body: JSON.stringify({ message: text })
         });
 
         const data = await response.json().catch(() => ({}));
 
         if (!response.ok) {
-            throw new Error(data.error || "Erro ao consultar o assistente.");
+            throw new Error(data.error || "Erro na API");
         }
 
         return data.reply || "Nao foi possivel obter uma resposta no momento.";
     }
 
-    chatForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
+    chatForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-        const message = chatInput.value.trim();
+        const text = chatInput.value.trim();
+        if (!text) return;
 
-        if (!message) {
-            return;
-        }
-
-        addMessage("Você", message, "user-message");
+        addMessage("Você", text, "user-message");
         chatInput.value = "";
         chatInput.focus();
 
-        const loadingMessage = addMessage("IA", "Pensando...", "bot-message");
+        const loading = addMessage("IA", "Pensando...", "bot-message");
 
         try {
-            const reply = await sendMessageToApi(message);
-            loadingMessage.innerHTML = `<strong>IA:</strong> ${reply}`;
-        } catch (error) {
-            loadingMessage.classList.remove("bot-message");
-            loadingMessage.classList.add("error-message");
-            loadingMessage.innerHTML = `<strong>Erro:</strong> ${error.message}`;
-            console.error("Erro no chatbot:", error);
+            const reply = await sendMessageToApi(text);
+            loading.innerHTML = `<strong>IA:</strong> ${reply}`;
+        } catch (err) {
+            loading.classList.remove("bot-message");
+            loading.classList.add("error-message");
+            loading.innerHTML = `<strong>Erro:</strong> ${err.message}`;
         }
     });
 });
