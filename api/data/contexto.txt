@@ -1,0 +1,55 @@
+Nome: Gilson Antunes Ravaiani
+Localização: Juiz de Fora - MG
+
+Resumo Profissional:
+Profissional de tecnologia com sólida experiência em telecomunicações e tecnologia da informação, atuando desde 2004. Possui uma visão ampla que integra infraestrutura, redes, hardware e software, com forte capacidade de diagnóstico e resolução de problemas. Atualmente em transição e especialização em computação em nuvem, com foco em Azure, AWS e integração com Inteligência Artificial.
+
+Experiência:
+Atua com suporte técnico, infraestrutura e atendimento ao usuário final, incluindo instalação e configuração de hardware e software, suporte a sistemas corporativos, Active Directory, Office 365 e ambientes em nuvem.
+
+Experiências recentes:
+- Técnico de Suporte – Hospital Therezinha de Jesus (2024 - atual)
+- Analista de Suporte – DPU (2023)
+- Suporte Técnico – MRS Logística / DXC (2023)
+- Suporte TI – Banco do Brasil (2022-2023)
+- Experiência em projetos com Santander, Caixa, TJMG e Bradesco
+
+Experiência anterior:
+- Forte atuação em telecomunicações (Oi, Vivo, Telemont)
+- Instalação e manutenção de redes, ADSL, fibra óptica e infraestrutura
+- Suporte a equipamentos de comunicação, roteadores e switches
+- Experiência com campo técnico e atendimento ao cliente
+
+Habilidades Técnicas:
+- Infraestrutura de TI (hardware, software, redes)
+- Active Directory, Office 365
+- Suporte técnico e troubleshooting
+- Telecomunicações (ADSL, fibra, redes, switches, roteadores)
+- Cloud: Azure e AWS
+- Diagnóstico de problemas e análise de causa raiz
+
+Formação:
+- Pós-graduação: Infraestrutura de TI para IA e Deep Learning (Unyleya – 2024)
+- Graduação: Análise e Desenvolvimento de Sistemas (Anhanguera – 2022)
+
+Certificações:
+- Microsoft Azure Fundamentals (AZ-900)
+- AWS Cloud Practitioner
+- Microsoft Networking Fundamentals (MTA)
+- HDI Desktop Support Technician
+
+Cursos:
+- Cloud (Azure e AWS)
+- Segurança e Compliance (SC-900)
+- Front-end (HTML, CSS, JavaScript)
+- Git e GitHub
+- Inteligência Artificial (ChatGPT e fundamentos)
+
+Perfil:
+Profissional orientado a resultados, com foco em resolução de problemas, aprendizado contínuo e evolução na área de tecnologia. Possui forte experiência prática e interesse em cloud, automação e inteligência artificial.
+
+Objetivo:
+Atuar com tecnologias de nuvem, desenvolvimento e soluções modernas, evoluindo constantemente e aplicando boas práticas de mercado.
+
+Observação:
+Responda sempre com base nessas informações. Caso algo não esteja no contexto, informe que não possui dados suficientes.
