@@ -1,20 +1,59 @@
 {
-  "resumo": "Profissional de tecnologia com experiência desde 2004 em telecomunicações e TI, com foco atual em cloud, Azure, AWS e integração com inteligência artificial.",
-  
+  "resumoCurto": "Gilson Antunes Ravaiani é um profissional de tecnologia com experiência em telecomunicações e TI, atualmente atuando com suporte e infraestrutura e em evolução para cloud computing e inteligência artificial.",
+
+  "resumo": "Gilson Antunes Ravaiani atua na área de tecnologia desde 2004, iniciando em telecomunicações e evoluindo para tecnologia da informação a partir de 2010. Possui experiência sólida em suporte técnico, infraestrutura, redes, hardware e software, com forte capacidade de diagnóstico e resolução de problemas. Atualmente está focado em cloud computing, com ênfase em Azure, AWS e integração com inteligência artificial.",
+
+  "localizacao": "Juiz de Fora, Minas Gerais, Brasil",
+
+  "contato": {
+    "email": "gravaiani@yahoo.com.br",
+    "linkedin": "https://www.linkedin.com/in/gilson-antunes-ravaiani/",
+    "github": "https://github.com/GilsonRavaiani"
+  },
+
+  "trabalhoAtual": {
+    "empresa": "NTT Data Brasil",
+    "cargo": "Service Field Support Technician Assistant | IT Infrastructure Support Technician",
+    "inicio": "Maio de 2025",
+    "local": "Juiz de Fora, MG",
+    "descricao": "Atua com suporte técnico e infraestrutura de TI, atendendo usuários, solucionando problemas e garantindo o funcionamento dos sistemas e equipamentos."
+  },
+
   "experiencia": [
-    "NTT Data – Service Field Support Technician Assistant",
-    "Hospital Therezinha de Jesus – Suporte ao usuário",
-    "DPU – Analista de infraestrutura",
-    "MRS Logística – Suporte técnico com Azure e Office 365",
-    "Banco do Brasil – suporte TI",
-    "Experiência com telecomunicações desde 2004"
+    "NTT Data Brasil – Suporte e infraestrutura de TI.",
+    "Outlier – AI Trainer.",
+    "Hospital Therezinha de Jesus – Suporte ao usuário.",
+    "DPU – Analista de suporte de infraestrutura.",
+    "MRS Logística – Suporte técnico com Azure e Office 365.",
+    "Banco do Brasil – Suporte de TI.",
+    "Experiência com telecomunicações desde 2004."
   ],
 
-  "certificacoes": [
-    "Azure Fundamentals (AZ-900)",
-    "AWS Cloud Practitioner",
-    "Microsoft Networking Fundamentals",
-    "HDI Desktop Support Technician"
+  "telecom": [
+    "Instalação e manutenção de redes ADSL.",
+    "Experiência com fibra óptica e cabeamento estruturado.",
+    "Atuação com roteadores e switches.",
+    "Experiência em telecomunicações desde 2004."
+  ],
+
+  "infraestrutura": [
+    "Suporte a hardware e software.",
+    "Instalação e configuração de sistemas.",
+    "Troubleshooting e análise de causa raiz.",
+    "Suporte ao usuário final.",
+    "Administração de ambientes corporativos."
+  ],
+
+  "azure": [
+    "Conhecimento em Microsoft Azure.",
+    "Experiência com ambientes cloud.",
+    "Certificação Azure Fundamentals (AZ-900)."
+  ],
+
+  "aws": [
+    "Conhecimento em AWS.",
+    "Certificação AWS Cloud Practitioner.",
+    "Experiência com conceitos de computação em nuvem."
   ],
 
   "skills": [
@@ -23,13 +62,62 @@
     "Active Directory",
     "Office 365",
     "Redes",
-    "Telecomunicações",
     "Infraestrutura",
-    "Hardware e Software"
+    "Telecomunicações",
+    "Hardware e Software",
+    "Troubleshooting",
+    "Atendimento ao usuário",
+    "Monitoramento de rede"
+  ],
+
+  "certificacoes": [
+    "Microsoft Azure Fundamentals (AZ-900)",
+    "AWS Cloud Practitioner",
+    "Microsoft Networking Fundamentals",
+    "HDI Desktop Support Technician",
+    "Microsoft Security Fundamentals (SC-900)"
   ],
 
   "formacao": [
-    "Pós-graduação em Infraestrutura para IA e Deep Learning",
+    "Pós-graduação em Infraestrutura de TI para Inteligência Artificial e Deep Learning",
     "Graduação em Análise e Desenvolvimento de Sistemas"
+  ],
+
+  "cursos": [
+    "Cloud computing (Azure e AWS)",
+    "Front-end (HTML, CSS, JavaScript)",
+    "Git e GitHub",
+    "Inteligência Artificial",
+    "Segurança e compliance"
+  ],
+
+  "projetos": [
+    "Portfólio pessoal com integração de chatbot com IA.",
+    "Projeto com Azure Static Web Apps.",
+    "API serverless com Azure Functions.",
+    "Integração com OpenAI.",
+    "Projeto de laboratório para estudo de cloud e IA."
+  ],
+
+  "portfolio": [
+    "Desenvolvimento de site pessoal com HTML, CSS e JavaScript.",
+    "Integração com IA via API.",
+    "Uso de CI/CD com GitHub Actions.",
+    "Hospedagem no Azure Static Web Apps."
+  ],
+
+  "objetivoProfissional": [
+    "Atuar com cloud computing e infraestrutura moderna.",
+    "Evoluir na área de inteligência artificial.",
+    "Trabalhar com Azure, automação e desenvolvimento.",
+    "Aplicar experiência prática em soluções modernas."
+  ],
+
+  "diferenciais": [
+    "Experiência prática desde 2004.",
+    "Conhecimento em telecom e TI.",
+    "Forte capacidade de diagnóstico de problemas.",
+    "Transição estratégica para cloud e IA.",
+    "Perfil focado em aprendizado contínuo."
   ]
 }
