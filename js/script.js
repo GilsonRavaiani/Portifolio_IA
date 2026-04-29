@@ -1,5 +1,5 @@
 // =========================
-// SEU CÓDIGO ORIGINAL
+// BOTAO RETORNAR
 // =========================
 
 let botaoRetornar = document.getElementById("botao-retornar");
@@ -20,14 +20,28 @@ if (botaoRetornar) {
 // =========================
 
 document.addEventListener("DOMContentLoaded", () => {
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatContainer = document.getElementById("chat-container");
+    const chatClose = document.getElementById("chat-close");
     const chatForm = document.getElementById("chat-form");
     const chatInput = document.getElementById("chat-input");
     const chatMessages = document.getElementById("chat-messages");
 
-    // Evita erro em páginas que não têm chatbot
-    if (!chatForm || !chatInput || !chatMessages) {
+    if (!chatToggle || !chatContainer || !chatClose || !chatForm || !chatInput || !chatMessages) {
         return;
     }
+
+    chatToggle.addEventListener("click", () => {
+        chatContainer.classList.toggle("chat-hidden");
+
+        if (!chatContainer.classList.contains("chat-hidden")) {
+            chatInput.focus();
+        }
+    });
+
+    chatClose.addEventListener("click", () => {
+        chatContainer.classList.add("chat-hidden");
+    });
 
     function addMessage(author, text, className = "") {
         const messageElement = document.createElement("div");
@@ -67,7 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const message = chatInput.value.trim();
 
-        if (!message) return;
+        if (!message) {
+            return;
+        }
 
         addMessage("Você", message, "user-message");
 
@@ -80,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const reply = await sendMessageToApi(message);
             loadingMessage.innerHTML = `<strong>IA:</strong> ${reply}`;
         } catch (error) {
+            loadingMessage.classList.remove("bot-message");
+            loadingMessage.classList.add("error-message");
             loadingMessage.innerHTML = `<strong>Erro:</strong> ${error.message}`;
         }
     });
