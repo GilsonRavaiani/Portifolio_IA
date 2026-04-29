@@ -1,34 +1,50 @@
-const { OpenAI } = require("openai");
+const OpenAI = require("openai");
 
 module.exports = async function (context, req) {
-  const pergunta = req.body?.pergunta || "Nenhuma pergunta recebida.";
-  context.log(`Pergunta recebida: ${pergunta}`);
-
-  const client = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
-  });
-
   try {
-    context.log("Fazendo chamada para a OpenAI...");
-    const resposta = await client.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system", content: "Você é o assistente oficial do portfólio do Gilson." },
-        { role: "user", content: pergunta }
-      ]
+    const apiKey = process.env.OPENAI_API_KEY;
+
+    if (!apiKey) {
+      context.res = {
+        status: 500,
+        body: { error: "OPENAI_API_KEY não configurada." }
+      };
+      return;
+    }
+
+    const { message } = req.body || {};
+
+    if (!message) {
+      context.res = {
+        status: 400,
+        body: { error: "Mensagem não enviada." }
+      };
+      return;
+    }
+
+    const client = new OpenAI({ apiKey });
+
+    const response = await client.responses.create({
+      model: "gpt-4.1-mini",
+      input: `Responda como assistente do portfólio de Gilson Ravaiani: ${message}`
     });
 
     context.res = {
       status: 200,
       body: {
-        resposta: resposta.choices[0].message.content
+        reply: response.output_text
       }
     };
-  } catch (erro) {
-    context.log('Erro ao chamar OpenAI:', erro.message);
+
+  } catch (error) {
+    context.log.error(error);
+
     context.res = {
       status: 500,
-      body: { erro: erro.message }
+      body: {
+        error: "Erro ao chamar OpenAI",
+        details: error.message
+      }
     };
   }
 };
