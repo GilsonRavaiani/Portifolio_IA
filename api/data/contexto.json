@@ -119,5 +119,87 @@
     "Forte capacidade de diagnóstico de problemas.",
     "Transição estratégica para cloud e IA.",
     "Perfil focado em aprendizado contínuo."
+  ],
+
+  "perfilNarrativo": [
+    "Gilson construiu sua trajetória profissional a partir de uma base sólida em telecomunicações, expandindo sua atuação para tecnologia da informação, suporte técnico, infraestrutura e redes.",
+    "Ao longo da carreira, desenvolveu forte capacidade de troubleshooting, diagnóstico de falhas e suporte ao usuário em ambientes corporativos.",
+    "Atualmente, direciona sua evolução profissional para cloud computing e inteligência artificial, combinando experiência prática com estudo contínuo e desenvolvimento de projetos próprios."
+  ],
+
+  "blocosRAG": [
+    "Gilson Antunes Ravaiani é um profissional de tecnologia com experiência desde 2004. Sua trajetória começou em telecomunicações e evoluiu para tecnologia da informação, com forte atuação em suporte técnico, infraestrutura, redes, hardware e software.",
+    "Na área de infraestrutura de TI, Gilson possui experiência com suporte a hardware e software, instalação e configuração de sistemas, troubleshooting, análise de causa raiz, administração de ambientes corporativos e atendimento ao usuário final.",
+    "Sua base em telecomunicações inclui instalação e manutenção de redes ADSL, experiência com fibra óptica, cabeamento estruturado, roteadores e switches, o que fortalece sua atuação em infraestrutura e conectividade.",
+    "Gilson vem ampliando sua atuação em cloud computing, com foco em Microsoft Azure e AWS, sustentado por certificações como Azure Fundamentals e AWS Cloud Practitioner.",
+    "Na frente de inteligência artificial, Gilson desenvolve projetos práticos com integração via API, chatbot com IA, recuperação de contexto com RAG e uso de OpenAI em ambiente de portfólio pessoal.",
+    "Atualmente, atua na NTT Data Brasil com suporte técnico e infraestrutura de TI, atendendo usuários, solucionando incidentes e contribuindo para o funcionamento dos sistemas e equipamentos."
+  ],
+
+  "respostasPremium": {
+    "resumoObjetivo": "Gilson Ravaiani é um profissional de tecnologia com experiência em telecomunicações, suporte e infraestrutura de TI, em evolução para cloud computing e inteligência artificial.",
+    "resumoDetalhado": "Gilson atua na área de tecnologia desde 2004, com trajetória iniciada em telecomunicações e consolidada em suporte técnico, infraestrutura, redes e ambientes corporativos. Atualmente, direciona sua carreira para cloud computing e inteligência artificial, com foco em Azure, AWS e integração de soluções modernas.",
+    "resumoEstrategico": "Gilson apresenta um perfil híbrido, reunindo experiência prática de longa data em telecom, suporte e infraestrutura com uma transição consistente para cloud computing e inteligência artificial, o que o posiciona de forma relevante para ambientes modernos de tecnologia.",
+    "linkedin": "Profissional de tecnologia com experiência em telecomunicações, suporte e infraestrutura de TI, ampliando atuação em cloud computing, Azure, AWS e inteligência artificial por meio de certificações e projetos práticos.",
+    "entrevista": "Minha trajetória começou em telecomunicações e evoluiu para TI, onde consolidei experiência em suporte, infraestrutura, redes e atendimento ao usuário. Hoje, estou direcionando essa base para cloud computing e inteligência artificial, com foco em Azure, AWS e integração com IA."
+  },
+
+  "faq": [
+    {
+      "pergunta": "Quem é Gilson Antunes Ravaiani?",
+      "resposta": "Gilson Antunes Ravaiani é um profissional de tecnologia com experiência em telecomunicações, suporte e infraestrutura de TI, atualmente em evolução para cloud computing e inteligência artificial."
+    },
+    {
+      "pergunta": "Faça um resumo sobre Gilson.",
+      "resposta": "Gilson é um profissional de tecnologia com atuação desde 2004, experiência em telecom, suporte e infraestrutura, e foco atual em cloud computing, Azure, AWS e inteligência artificial."
+    },
+    {
+      "pergunta": "Quais são as habilidades do Gilson?",
+      "resposta": "Entre as principais habilidades de Gilson estão Azure, AWS, Active Directory, Office 365, redes, infraestrutura, telecomunicações, hardware, software, troubleshooting e atendimento ao usuário."
+    },
+    {
+      "pergunta": "Quais são os diferenciais do Gilson?",
+      "resposta": "Os principais diferenciais de Gilson são a experiência prática desde 2004, a base sólida em telecom e TI, a forte capacidade de diagnóstico técnico e a transição estratégica para cloud e inteligência artificial."
+    },
+    {
+      "pergunta": "Em que Gilson trabalha atualmente?",
+      "resposta": "Atualmente, Gilson atua na NTT Data Brasil com suporte técnico e infraestrutura de TI, atendendo usuários, solucionando problemas e garantindo o funcionamento dos sistemas e equipamentos."
+    },
+    {
+      "pergunta": "Quais projetos Gilson desenvolveu?",
+      "resposta": "Gilson desenvolveu projetos como portfólio pessoal com chatbot com IA, uso de Azure Static Web Apps, API serverless com Azure Functions, integração com OpenAI e laboratório prático para estudos de cloud e IA."
+    }
+  ],
+
+  "skillsDetalhadas": {
+    "Azure": "Intermediário",
+    "AWS": "Intermediário",
+    "Redes": "Avançado",
+    "Infraestrutura": "Avançado",
+    "Telecomunicações": "Avançado",
+    "Troubleshooting": "Avançado",
+    "Office 365": "Intermediário",
+    "Active Directory": "Intermediário",
+    "Inteligência Artificial": "Em evolução"
+  },
+
+  "areasDeAtuacao": [
+    "Suporte técnico",
+    "Infraestrutura de TI",
+    "Telecomunicações",
+    "Redes",
+    "Cloud computing",
+    "Integração com inteligência artificial"
+  ],
+
+  "posicionamentoProfissional": "Profissional com base prática sólida em suporte, infraestrutura, redes e telecomunicações, em transição consistente para cloud computing, automação e inteligência artificial.",
+
+  "tonsDeResposta": [
+    "objetivo",
+    "detalhado",
+    "tecnico",
+    "estrategico",
+    "linkedin",
+    "entrevista"
   ]
 }
