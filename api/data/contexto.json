@@ -1,380 +1,123 @@
 {
-  "meta": {
-    "versao": "1.0",
-    "idioma": "pt-BR",
-    "tipo": "dataset_rag_profissional",
-    "objetivo": "Base de conhecimento para chatbot profissional, portfólio pessoal e geração de respostas contextuais sobre perfil técnico, experiência, cloud computing e projetos com IA.",
-    "autor": "Gilson Antunes Ravaiani"
-  },
-  "identidade": {
-    "nome": "Gilson Antunes Ravaiani",
-    "localizacao": "Juiz de Fora, Minas Gerais, Brasil",
-    "resumoCurto": "Profissional de tecnologia com experiência em telecomunicações e TI, atuação em suporte e infraestrutura, e transição estratégica para cloud computing e inteligência artificial.",
-    "resumoProfissional": "Gilson Antunes Ravaiani atua na área de tecnologia desde 2004, iniciando em telecomunicações e evoluindo para tecnologia da informação a partir de 2010. Possui experiência sólida em suporte técnico, infraestrutura, redes, hardware e software, com forte capacidade de diagnóstico e resolução de problemas. Atualmente está focado em cloud computing, com ênfase em Azure, AWS e integração com inteligência artificial.",
-    "headlineLinkedin": "Profissional de Infraestrutura e Suporte de TI | Azure | AWS | Cloud Computing | Inteligência Artificial | Telecom e Redes",
-    "posicionamento": "Profissional com base prática robusta em suporte, infraestrutura e telecom, em evolução consistente para cloud computing, automação e integração com soluções de inteligência artificial."
-  },
+  "resumoCurto": "Gilson Antunes Ravaiani é um profissional de tecnologia com experiência em telecomunicações e TI, atualmente atuando com suporte e infraestrutura e em evolução para cloud computing e inteligência artificial.",
+
+  "resumo": "Gilson Antunes Ravaiani atua na área de tecnologia desde 2004, iniciando em telecomunicações e evoluindo para tecnologia da informação a partir de 2010. Possui experiência sólida em suporte técnico, infraestrutura, redes, hardware e software, com forte capacidade de diagnóstico e resolução de problemas. Atualmente está focado em cloud computing, com ênfase em Azure, AWS e integração com inteligência artificial.",
+
+  "localizacao": "Juiz de Fora, Minas Gerais, Brasil",
+
   "contato": {
     "email": "gravaiani@yahoo.com.br",
     "linkedin": "https://www.linkedin.com/in/gilson-antunes-ravaiani/",
     "github": "https://github.com/GilsonRavaiani"
   },
-  "perfilNarrativo": {
-    "elevador": "Gilson é um profissional de tecnologia com trajetória iniciada em telecomunicações e consolidada em TI, reunindo experiência prática em suporte, infraestrutura, redes e atendimento ao usuário. Seu diferencial está na combinação entre vivência operacional real e uma transição estratégica para cloud computing e inteligência artificial.",
-    "versaoRecrutador": "Profissional com experiência prática desde 2004, forte atuação em suporte e infraestrutura de TI, conhecimento em redes, telecom e ambientes corporativos, além de certificações em Azure e AWS. Apresenta perfil de evolução contínua e direcionamento claro para cloud computing e IA.",
-    "versaoTecnica": "Atua com suporte e infraestrutura de TI, troubleshooting, administração de ambientes corporativos, suporte a hardware e software, configuração de sistemas e atendimento ao usuário final. Possui conhecimentos em Azure, AWS, Active Directory, Office 365, redes e monitoramento, com foco crescente em soluções modernas baseadas em nuvem e IA.",
-    "versaoStorytelling": "Sua trajetória começou em telecomunicações, com forte contato com redes, conectividade e infraestrutura física. Ao migrar para TI, ampliou a atuação para suporte técnico, ambientes corporativos e atendimento ao usuário. Hoje, essa base prática sustenta uma transição consistente para cloud computing e inteligência artificial, unindo experiência operacional com visão de futuro."
-  },
+
   "trabalhoAtual": {
     "empresa": "NTT Data Brasil",
     "cargo": "Service Field Support Technician Assistant | IT Infrastructure Support Technician",
-    "inicio": "2025-05",
-    "inicioTexto": "Maio de 2025",
+    "inicio": "Maio de 2025",
     "local": "Juiz de Fora, MG",
-    "descricao": "Atua com suporte técnico e infraestrutura de TI, atendendo usuários, solucionando problemas e garantindo o funcionamento dos sistemas e equipamentos.",
-    "competenciasRelacionadas": [
-      "Suporte técnico",
-      "Infraestrutura de TI",
-      "Atendimento ao usuário",
-      "Diagnóstico de falhas",
-      "Resolução de incidentes",
-      "Manutenção de equipamentos"
-    ],
-    "resumoRAG": "Na NTT Data Brasil, Gilson atua diretamente com suporte e infraestrutura de TI, realizando atendimento a usuários, resolução de incidentes, manutenção do ambiente operacional e apoio à continuidade dos serviços."
+    "descricao": "Atua com suporte técnico e infraestrutura de TI, atendendo usuários, solucionando problemas e garantindo o funcionamento dos sistemas e equipamentos."
   },
-  "experienciaEstruturada": [
-    {
-      "empresa": "NTT Data Brasil",
-      "area": "Suporte e infraestrutura de TI",
-      "descricao": "Atuação em suporte técnico e infraestrutura, com foco em atendimento a usuários, troubleshooting e estabilidade operacional.",
-      "tags": ["suporte", "infraestrutura", "atendimento", "troubleshooting"]
-    },
-    {
-      "empresa": "Outlier",
-      "area": "AI Trainer",
-      "descricao": "Atuação relacionada a treinamento e interação com inteligência artificial.",
-      "tags": ["inteligencia artificial", "dados", "treinamento", "ai"]
-    },
-    {
-      "empresa": "Hospital Therezinha de Jesus",
-      "area": "Suporte ao usuário",
-      "descricao": "Atuação em suporte técnico e atendimento ao usuário em ambiente institucional.",
-      "tags": ["suporte", "usuario final", "ambiente corporativo"]
-    },
-    {
-      "empresa": "DPU",
-      "area": "Analista de suporte de infraestrutura",
-      "descricao": "Atuação em suporte de infraestrutura, administração de ambiente e resolução de problemas técnicos.",
-      "tags": ["infraestrutura", "suporte", "ambiente corporativo"]
-    },
-    {
-      "empresa": "MRS Logística",
-      "area": "Suporte técnico com Azure e Office 365",
-      "descricao": "Experiência com suporte técnico utilizando tecnologias como Azure e Office 365 em contexto corporativo.",
-      "tags": ["azure", "office 365", "suporte", "cloud"]
-    },
-    {
-      "empresa": "Banco do Brasil",
-      "area": "Suporte de TI",
-      "descricao": "Atuação em suporte técnico em ambiente corporativo.",
-      "tags": ["suporte", "infraestrutura", "usuario final"]
-    },
-    {
-      "empresa": "Telecomunicações",
-      "area": "Infraestrutura e conectividade",
-      "descricao": "Experiência prática com telecomunicações desde 2004, incluindo redes ADSL, fibra óptica, roteadores, switches e cabeamento estruturado.",
-      "tags": ["telecom", "redes", "fibra", "roteadores", "switches"]
-    }
+
+  "experiencia": [
+    "NTT Data Brasil – Suporte e infraestrutura de TI.",
+    "Outlier – AI Trainer.",
+    "Hospital Therezinha de Jesus – Suporte ao usuário.",
+    "DPU – Analista de suporte de infraestrutura.",
+    "MRS Logística – Suporte técnico com Azure e Office 365.",
+    "Banco do Brasil – Suporte de TI.",
+    "Experiência com telecomunicações desde 2004."
   ],
-  "areasDeEspecialidade": {
-    "telecom": {
-      "resumo": "Base técnica construída em telecomunicações, com experiência em conectividade, infraestrutura física e redes.",
-      "itens": [
-        "Instalação e manutenção de redes ADSL",
-        "Experiência com fibra óptica e cabeamento estruturado",
-        "Atuação com roteadores e switches",
-        "Experiência em telecomunicações desde 2004"
-      ],
-      "resumoRAG": "Gilson possui experiência em telecomunicações desde 2004, com vivência em instalação e manutenção de redes ADSL, fibra óptica, cabeamento estruturado e operação de equipamentos de rede como roteadores e switches."
-    },
-    "infraestrutura": {
-      "resumo": "Atuação em suporte técnico e infraestrutura de TI, com foco em ambientes corporativos, troubleshooting e suporte operacional.",
-      "itens": [
-        "Suporte a hardware e software",
-        "Instalação e configuração de sistemas",
-        "Troubleshooting e análise de causa raiz",
-        "Suporte ao usuário final",
-        "Administração de ambientes corporativos"
-      ],
-      "resumoRAG": "Na área de infraestrutura, Gilson reúne experiência com suporte a hardware e software, instalação e configuração de sistemas, troubleshooting, análise de causa raiz e atendimento ao usuário final em ambientes corporativos."
-    },
-    "cloud": {
-      "resumo": "Transição estratégica para cloud computing com foco em Azure e AWS.",
-      "azure": [
-        "Conhecimento em Microsoft Azure",
-        "Experiência com ambientes cloud",
-        "Certificação Azure Fundamentals (AZ-900)"
-      ],
-      "aws": [
-        "Conhecimento em AWS",
-        "Certificação AWS Cloud Practitioner",
-        "Experiência com conceitos de computação em nuvem"
-      ],
-      "resumoRAG": "Gilson está ampliando sua atuação em cloud computing, com foco em Azure e AWS, sustentado por certificações e por estudos aplicados em ambientes de nuvem e integração com projetos práticos."
-    },
-    "ia": {
-      "resumo": "Evolução para inteligência artificial aplicada, com interesse em integração via API, chatbot, RAG e aplicações modernas em cloud.",
-      "itens": [
-        "Integração com OpenAI",
-        "Projeto de chatbot com IA",
-        "Uso de RAG para recuperação de contexto",
-        "Estudo prático de IA aplicada em portfólio pessoal"
-      ],
-      "resumoRAG": "Na frente de inteligência artificial, Gilson vem desenvolvendo projetos práticos com integração via API, chatbot, recuperação de contexto com RAG e uso combinado de cloud e IA em ambiente de portfólio."
-    }
-  },
-  "skills": {
-    "principais": [
-      "Azure",
-      "AWS",
-      "Active Directory",
-      "Office 365",
-      "Redes",
-      "Infraestrutura",
-      "Telecomunicações",
-      "Hardware e Software",
-      "Troubleshooting",
-      "Atendimento ao usuário",
-      "Monitoramento de rede"
-    ],
-    "agrupadas": {
-      "cloud": ["Azure", "AWS"],
-      "infraestrutura": ["Infraestrutura", "Hardware e Software", "Monitoramento de rede"],
-      "suporte": ["Troubleshooting", "Atendimento ao usuário", "Office 365"],
-      "redes": ["Redes", "Telecomunicações", "Active Directory"]
-    },
-    "niveisInferidos": {
-      "Telecomunicações": "Avançado",
-      "Redes": "Avançado",
-      "Infraestrutura": "Avançado",
-      "Suporte técnico": "Avançado",
-      "Troubleshooting": "Avançado",
-      "Office 365": "Intermediário",
-      "Active Directory": "Intermediário",
-      "Azure": "Intermediário",
-      "AWS": "Intermediário",
-      "Inteligência Artificial aplicada": "Em evolução"
-    }
-  },
+
+  "telecom": [
+    "Instalação e manutenção de redes ADSL.",
+    "Experiência com fibra óptica e cabeamento estruturado.",
+    "Atuação com roteadores e switches.",
+    "Experiência em telecomunicações desde 2004."
+  ],
+
+  "infraestrutura": [
+    "Suporte a hardware e software.",
+    "Instalação e configuração de sistemas.",
+    "Troubleshooting e análise de causa raiz.",
+    "Suporte ao usuário final.",
+    "Administração de ambientes corporativos."
+  ],
+
+  "azure": [
+    "Conhecimento em Microsoft Azure.",
+    "Experiência com ambientes cloud.",
+    "Certificação Azure Fundamentals (AZ-900)."
+  ],
+
+  "aws": [
+    "Conhecimento em AWS.",
+    "Certificação AWS Cloud Practitioner.",
+    "Experiência com conceitos de computação em nuvem."
+  ],
+
+  "skills": [
+    "Azure",
+    "AWS",
+    "Active Directory",
+    "Office 365",
+    "Redes",
+    "Infraestrutura",
+    "Telecomunicações",
+    "Hardware e Software",
+    "Troubleshooting",
+    "Atendimento ao usuário",
+    "Monitoramento de rede"
+  ],
+
   "certificacoes": [
-    {
-      "nome": "Microsoft Azure Fundamentals",
-      "codigo": "AZ-900",
-      "area": "Cloud",
-      "plataforma": "Microsoft Azure"
-    },
-    {
-      "nome": "AWS Cloud Practitioner",
-      "codigo": null,
-      "area": "Cloud",
-      "plataforma": "AWS"
-    },
-    {
-      "nome": "Microsoft Networking Fundamentals",
-      "codigo": null,
-      "area": "Redes",
-      "plataforma": "Microsoft"
-    },
-    {
-      "nome": "HDI Desktop Support Technician",
-      "codigo": null,
-      "area": "Suporte",
-      "plataforma": "HDI"
-    },
-    {
-      "nome": "Microsoft Security Fundamentals",
-      "codigo": "SC-900",
-      "area": "Segurança",
-      "plataforma": "Microsoft"
-    }
+    "Microsoft Azure Fundamentals (AZ-900)",
+    "AWS Cloud Practitioner",
+    "Microsoft Networking Fundamentals",
+    "HDI Desktop Support Technician",
+    "Microsoft Security Fundamentals (SC-900)"
   ],
+
   "formacao": [
-    {
-      "tipo": "Pós-graduação",
-      "curso": "Infraestrutura de TI para Inteligência Artificial e Deep Learning",
-      "area": "Infraestrutura, IA e Deep Learning"
-    },
-    {
-      "tipo": "Graduação",
-      "curso": "Análise e Desenvolvimento de Sistemas",
-      "area": "Tecnologia da Informação"
-    }
+    "Pós-graduação em Infraestrutura de TI para Inteligência Artificial e Deep Learning",
+    "Graduação em Análise e Desenvolvimento de Sistemas"
   ],
-  "cursosEEstudos": [
+
+  "cursos": [
     "Cloud computing (Azure e AWS)",
     "Front-end (HTML, CSS, JavaScript)",
     "Git e GitHub",
     "Inteligência Artificial",
     "Segurança e compliance"
   ],
+
   "projetos": [
-    {
-      "nome": "Portfólio pessoal com integração de chatbot com IA",
-      "descricao": "Projeto pessoal voltado à apresentação profissional com integração de inteligência artificial e base contextual.",
-      "tecnologias": ["HTML", "CSS", "JavaScript", "OpenAI", "RAG"],
-      "categoria": ["portfólio", "chatbot", "IA"]
-    },
-    {
-      "nome": "Projeto com Azure Static Web Apps",
-      "descricao": "Hospedagem de front-end estático em ambiente cloud com integração a fluxo de deploy automatizado.",
-      "tecnologias": ["Azure Static Web Apps", "GitHub Actions"],
-      "categoria": ["cloud", "deploy", "frontend"]
-    },
-    {
-      "nome": "API serverless com Azure Functions",
-      "descricao": "Implementação de backend serverless para integração com IA e lógica de resposta.",
-      "tecnologias": ["Azure Functions", "Node.js"],
-      "categoria": ["serverless", "backend", "cloud"]
-    },
-    {
-      "nome": "Integração com OpenAI",
-      "descricao": "Uso de modelos de IA via API para criação de chatbot e respostas contextuais.",
-      "tecnologias": ["OpenAI API", "Node.js"],
-      "categoria": ["IA", "integração", "API"]
-    },
-    {
-      "nome": "Projeto de laboratório para estudo de cloud e IA",
-      "descricao": "Ambiente prático de aprendizado voltado à experimentação com cloud computing, automação e inteligência artificial.",
-      "tecnologias": ["Azure", "AWS", "OpenAI", "GitHub"],
-      "categoria": ["laboratório", "estudo", "cloud", "IA"]
-    }
+    "Portfólio pessoal com integração de chatbot com IA.",
+    "Projeto com Azure Static Web Apps.",
+    "API serverless com Azure Functions.",
+    "Integração com OpenAI.",
+    "Projeto de laboratório para estudo de cloud e IA."
   ],
-  "portfolioTecnico": {
-    "resumo": "Desenvolvimento de site pessoal com foco em apresentação profissional, integração com chatbot de IA e deploy em ambiente cloud.",
-    "itens": [
-      "Desenvolvimento de site pessoal com HTML, CSS e JavaScript",
-      "Integração com IA via API",
-      "Uso de CI/CD com GitHub Actions",
-      "Hospedagem no Azure Static Web Apps"
-    ],
-    "resumoRAG": "No portfólio técnico, Gilson desenvolveu um site pessoal com HTML, CSS e JavaScript, integrou chatbot com IA via API, utilizou CI/CD com GitHub Actions e hospedou a aplicação no Azure Static Web Apps."
-  },
-  "objetivosProfissionais": {
-    "curtoPrazo": "Atuar com cloud computing e infraestrutura moderna.",
-    "medioPrazo": "Consolidar atuação em Azure, automação e desenvolvimento de soluções baseadas em nuvem.",
-    "longoPrazo": "Evoluir para inteligência artificial aplicada, integrando cloud, automação e soluções inteligentes em projetos profissionais."
-  },
+
+  "portfolio": [
+    "Desenvolvimento de site pessoal com HTML, CSS e JavaScript.",
+    "Integração com IA via API.",
+    "Uso de CI/CD com GitHub Actions.",
+    "Hospedagem no Azure Static Web Apps."
+  ],
+
+  "objetivoProfissional": [
+    "Atuar com cloud computing e infraestrutura moderna.",
+    "Evoluir na área de inteligência artificial.",
+    "Trabalhar com Azure, automação e desenvolvimento.",
+    "Aplicar experiência prática em soluções modernas."
+  ],
+
   "diferenciais": [
-    "Experiência prática em tecnologia desde 2004.",
-    "Base sólida em telecomunicações, redes e infraestrutura.",
-    "Forte capacidade de diagnóstico e resolução de problemas.",
-    "Transição estratégica e consistente para cloud computing e IA.",
-    "Perfil orientado a aprendizado contínuo e evolução técnica."
-  ],
-  "pontosFortesInterpretados": [
-    "Combina experiência operacional real com visão de evolução tecnológica.",
-    "Possui base técnica ampla, útil para ambientes híbridos entre infraestrutura tradicional e nuvem.",
-    "Tem posicionamento profissional coerente entre suporte, infraestrutura, cloud e IA.",
-    "Apresenta perfil de adaptabilidade, aprendizado contínuo e construção prática de portfólio."
-  ],
-  "contextosDePerguntaEResposta": [
-    {
-      "intent": "quem_e_gilson",
-      "perguntaExemplo": "Quem é Gilson Antunes Ravaiani?",
-      "respostaBase": "Gilson Antunes Ravaiani é um profissional de tecnologia com experiência desde 2004, iniciando em telecomunicações e consolidando atuação em suporte e infraestrutura de TI. Atualmente está em evolução para cloud computing e inteligência artificial, com foco em Azure, AWS e integração de soluções modernas."
-    },
-    {
-      "intent": "resumo_profissional",
-      "perguntaExemplo": "Faça um resumo profissional do Gilson.",
-      "respostaBase": "Gilson é um profissional de tecnologia com trajetória construída em telecom, redes, suporte e infraestrutura de TI. Possui forte base prática em ambientes corporativos, certificações em Azure e AWS, e direciona sua carreira para cloud computing e inteligência artificial."
-    },
-    {
-      "intent": "experiencia_tecnica",
-      "perguntaExemplo": "Quais são as principais experiências técnicas dele?",
-      "respostaBase": "As principais experiências técnicas de Gilson envolvem suporte técnico, infraestrutura de TI, redes, hardware, software, troubleshooting, atendimento ao usuário, telecomunicações, ambientes corporativos e conhecimentos em cloud com Azure e AWS."
-    },
-    {
-      "intent": "cloud_e_ia",
-      "perguntaExemplo": "Como está a atuação dele em cloud e IA?",
-      "respostaBase": "Gilson está em transição estratégica para cloud computing e inteligência artificial, com certificações em Azure e AWS, experiência prática em projetos com Azure Static Web Apps, Azure Functions, integração com OpenAI e uso de chatbot com RAG em portfólio técnico."
-    },
-    {
-      "intent": "diferenciais",
-      "perguntaExemplo": "Quais os diferenciais do perfil dele?",
-      "respostaBase": "Os principais diferenciais do perfil de Gilson são a experiência prática acumulada desde 2004, a base sólida em telecom e infraestrutura, a capacidade de diagnóstico técnico e a evolução consistente para cloud computing e inteligência artificial."
-    },
-    {
-      "intent": "projetos",
-      "perguntaExemplo": "Quais projetos ele desenvolveu?",
-      "respostaBase": "Entre os projetos desenvolvidos por Gilson estão o portfólio pessoal com chatbot de IA, integração com OpenAI, API serverless com Azure Functions, hospedagem com Azure Static Web Apps e laboratório prático para estudo de cloud e inteligência artificial."
-    }
-  ],
-  "blocosRAG": [
-    {
-      "id": "rag_01_identidade_profissional",
-      "titulo": "Identidade profissional",
-      "conteudo": "Gilson Antunes Ravaiani é um profissional de tecnologia com experiência desde 2004. Sua trajetória começou em telecomunicações e evoluiu para tecnologia da informação a partir de 2010. Atua com suporte técnico, infraestrutura, redes, hardware e software, e atualmente direciona sua carreira para cloud computing e inteligência artificial.",
-      "tags": ["perfil", "resumo", "identidade", "carreira"]
-    },
-    {
-      "id": "rag_02_suporte_infraestrutura",
-      "titulo": "Suporte e infraestrutura",
-      "conteudo": "Gilson possui experiência sólida em suporte técnico e infraestrutura de TI, com atuação em suporte a hardware e software, instalação e configuração de sistemas, troubleshooting, análise de causa raiz, atendimento ao usuário final e administração de ambientes corporativos.",
-      "tags": ["suporte", "infraestrutura", "troubleshooting", "usuario final"]
-    },
-    {
-      "id": "rag_03_telecom_redes",
-      "titulo": "Telecomunicações e redes",
-      "conteudo": "Sua base técnica foi construída em telecomunicações, com experiência em instalação e manutenção de redes ADSL, fibra óptica, cabeamento estruturado, roteadores e switches. Essa vivência fortaleceu sua atuação posterior em infraestrutura de TI e redes corporativas.",
-      "tags": ["telecom", "redes", "fibra", "switches", "roteadores"]
-    },
-    {
-      "id": "rag_04_cloud",
-      "titulo": "Cloud computing",
-      "conteudo": "Gilson está em evolução para cloud computing, com foco em Microsoft Azure e AWS. Possui certificações como Azure Fundamentals e AWS Cloud Practitioner, além de experiência em projetos e estudos aplicados em ambientes cloud.",
-      "tags": ["cloud", "azure", "aws", "certificacoes"]
-    },
-    {
-      "id": "rag_05_ia_projetos",
-      "titulo": "Inteligência artificial e projetos",
-      "conteudo": "Na área de inteligência artificial, Gilson tem desenvolvido projetos com integração via API, chatbot com IA, recuperação de contexto com RAG e uso de OpenAI em aplicações hospedadas em cloud. Esses projetos fazem parte do seu portfólio técnico e laboratório de evolução profissional.",
-      "tags": ["ia", "openai", "rag", "chatbot", "portfolio"]
-    },
-    {
-      "id": "rag_06_trabalho_atual",
-      "titulo": "Atuação atual",
-      "conteudo": "Atualmente, Gilson atua na NTT Data Brasil como Service Field Support Technician Assistant | IT Infrastructure Support Technician, realizando suporte técnico e atividades de infraestrutura de TI, com foco em atendimento a usuários, resolução de problemas e garantia do funcionamento dos sistemas e equipamentos.",
-      "tags": ["ntt data", "trabalho atual", "infraestrutura", "suporte"]
-    },
-    {
-      "id": "rag_07_posicionamento",
-      "titulo": "Posicionamento profissional",
-      "conteudo": "O posicionamento de Gilson é o de um profissional que une experiência prática em ambientes operacionais com evolução direcionada para tecnologias modernas. Seu perfil combina base sólida em telecom, suporte e infraestrutura com interesse consistente em cloud computing, automação e inteligência artificial.",
-      "tags": ["posicionamento", "diferenciais", "cloud", "ia"]
-    }
-  ],
-  "respostasPremium": {
-    "resumoObjetivo": "Gilson Ravaiani é um profissional de tecnologia com experiência em telecomunicações, suporte e infraestrutura de TI, atualmente direcionado para cloud computing e inteligência artificial.",
-    "resumoDetalhado": "Com atuação em tecnologia desde 2004, Gilson construiu uma base sólida em telecomunicações, redes, suporte técnico e infraestrutura de TI. Ao longo da carreira, ampliou sua experiência em ambientes corporativos, atendimento ao usuário, troubleshooting, hardware, software e administração de ambientes. Atualmente, vem consolidando sua transição para cloud computing e inteligência artificial, com foco em Azure, AWS e projetos práticos integrados com IA.",
-    "resumoEstrategico": "Gilson apresenta um perfil híbrido e valorizado no mercado: reúne experiência prática de longa data em operações de TI, suporte e infraestrutura, ao mesmo tempo em que constrói uma trajetória consistente em cloud computing e inteligência artificial. Essa combinação o posiciona bem para contextos modernos que exigem base técnica sólida e capacidade de adaptação.",
-    "respostaLinkedin": "Profissional de tecnologia com trajetória construída em telecomunicações, suporte e infraestrutura de TI, ampliando atuação para cloud computing e inteligência artificial. Experiência prática em ambientes corporativos, redes, troubleshooting e suporte ao usuário, com certificações em Azure e AWS e projetos próprios envolvendo chatbot, APIs e RAG.",
-    "respostaEntrevista": "Minha trajetória começou em telecomunicações e evoluiu naturalmente para TI, onde consolidei experiência em suporte, infraestrutura, redes e atendimento ao usuário em ambientes corporativos. Hoje, estou direcionando essa base para cloud computing e inteligência artificial, aplicando conhecimentos em Azure, AWS e projetos práticos com integração de IA."
-  },
-  "instrucoesDeUsoNoRAG": {
-    "comoRecuperar": [
-      "Priorizar blocos em 'blocosRAG' para respostas conversacionais.",
-      "Usar 'contextosDePerguntaEResposta' para perguntas frequentes.",
-      "Usar 'respostasPremium' para respostas rápidas e de alto impacto.",
-      "Usar 'experienciaEstruturada', 'skills' e 'certificacoes' para perguntas específicas."
-    ],
-    "estrategiaDePrompt": "Responda em português do Brasil, com linguagem natural e profissional. Evite apenas listar informações. Conecte experiência, contexto e objetivo profissional. Quando possível, adapte a resposta ao tom pedido: objetivo, técnico, estratégico ou inspirador.",
-    "tonsSuportados": [
-      "objetivo",
-      "detalhado",
-      "tecnico",
-      "estrategico",
-      "linkedin",
-      "entrevista"
-    ]
-  }
+    "Experiência prática desde 2004.",
+    "Conhecimento em telecom e TI.",
+    "Forte capacidade de diagnóstico de problemas.",
+    "Transição estratégica para cloud e IA.",
+    "Perfil focado em aprendizado contínuo."
+  ]
 }
